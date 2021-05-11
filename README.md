@@ -21,5 +21,8 @@ Depuis le portail eedomus, cliquez sur `Configuration / Ajouter ou supprimer un 
 1. Télécharger le projet sur GitHub : [github.com/eedomusbox/eedomusScript_hydrao](https://github.com/eedomusbox/eedomusScript_hydrao/archive/master.zip)
 2. Uploader le fichier *src/wind_direction.php* sur la box ([Doc eedomus scripts](http://doc.eedomus.com/view/Scripts#Script_HTTP_sur_la_box_eedomus))
 
-## Affichage
+## Forum de discution
+Forum Eedomus https://forum.eedomus.com/viewtopic.php?f=50&t=10704
+
+## Résultat
 ![alt text](https://github.com/eedomusbox/eedomusScript_hydrao/blob/main/hydrao_eedomus_portail.png)

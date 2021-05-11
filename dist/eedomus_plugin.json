@@ -1,0 +1,73 @@
+{
+	"plugin_id": "hydrao",
+	"name_fr": "Hydrao",
+	"icon": "hydrao.png",
+	"version": "1",
+	"creation_date": "2021-05-10",
+	"modification_date": "2021-05-10",
+	"author": "Eedomusbox",
+	"description_fr": "Widget Douche Hydrao. Affichage des infos disponibles sur l'application Hydrao. Code disponible <a href='http://www.madomotic.fr/' target='_blank'>ici</a>",
+	"description_en": "",
+	"description_es": "",
+	"description_it": "",
+	"description_de": "",
+	"forum_link": "https://forum.eedomus.com/viewtopic.php?f=50&t=10704",
+	"parameters": [
+	
+		{
+			"parameter": "email",
+			"description": "Indiquez votre adresse mail Hydrao",
+			"xtype": "textfield",
+			"field": "allowBlank: false, width: 300"
+		},
+		{
+			"parameter": "mdp",
+			"description": "Indiquez votre mdp Hydrao",
+			"xtype": "textfield",
+			"field": "allowBlank: false, width: 300"
+		},
+				{
+			"parameter": "txtt",
+			"description": "Pour obtenir une Api Key, envoyer un mail à <a href='mailto:contact@hydrao.com' target='_blank'>contact@hydrao.com</a>",
+			"xtype": "textfield",
+			"field": "allowBlank: true, width: 0, style: 'visibility:hidden;'"
+		},
+		{
+			"parameter": "apiKey",
+			"description": "Indiquez votre Api Key privée Hydrao",
+			"xtype": "textfield",
+			"field": "allowBlank: false, width: 300"
+		},
+
+		{
+			"parameter": "conteneur",
+			"description": "Choisissez la taille du widget",
+			"xtype": "combo",
+			"default_value": "4",
+			"field": "style: 'padding: 3px;', width:100, allowBlank:false, store:[[4, '4 lignes'] , [5,'5 lignes']], triggerAction: 'all'"
+		}
+
+	],
+	"scripts": [
+		{
+			"name": "hydrao.php"
+		}
+	],
+	"devices": [
+	{
+			"device_id": "widget",
+			"module_id": "54",
+			"name_fr": "Hydrao",
+			"icon": "hydrao.png",
+			"utilisation_id": "0",
+			"parameters":
+			{
+				"SMARTPHONE_HEIGHT": "plugin.parameters.conteneur",
+				"VAR1": "plugin.parameters.email",
+				"VAR2": "plugin.parameters.mdp",
+				"VAR3": "plugin.parameters.apiKey",
+				"RAW_URL": "http://localhost/script/?exec=hydrao.php&mode=1&email=[VAR1]&pwd=[VAR2]&apikey=[VAR3]"
+			}
+		}
+	]
+}
